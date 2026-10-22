@@ -4,27 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La Belle Estética — Links</title>
-  <meta name="description" content="La Belle Estética Londrina. Micropigmentação, cabelo, tratamento facial, botox e lábios.">
+  <meta name="description" content="La Belle Estética Londrina. Micropigmentação, cabelo, tratamento facial, botox e lábios. Agende seu horário.">
   <meta name="theme-color" content="#F6F1F2">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23A67580'/><text x='16' y='21' text-anchor='middle' fill='white' font-size='13' font-family='serif' font-weight='500'>LB</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23A67580'/><text x='16' y='21' text-anchor='middle' fill='white' font-size='13' font-family='serif' font-weight='600'>LB</text></svg>">
   <meta property="og:title" content="La Belle Estética — Londrina">
   <meta property="og:description" content="Beleza, cuidado e transformação em um só lugar. Micropigmentação, cabelo, tratamento facial e muito mais.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #F6F1F2;
       --card: #FFFFFF;
       --rose: #A67580;
-      --rose-deep: #8E6069;
+      --rose-light: #B07D88;
+      --rose-mid: #9A6B76;
+      --rose-deep: #8A5C67;
       --ink: #2B1D23;
       --mauve: #6B5560;
       --champagne: #C8A882;
       --display: "Playfair Display", Georgia, "Times New Roman", serif;
       --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-      --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     *, *::before, *::after {
@@ -41,13 +43,12 @@
       min-height: 100vh;
       min-height: 100dvh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 24px 16px;
+      padding: 32px 20px;
       background-color: var(--bg);
-      background-image: radial-gradient(ellipse at 50% 0%, rgba(200, 168, 130, 0.06) 0%, transparent 60%);
-      background-attachment: fixed;
+      background-image: radial-gradient(ellipse 600px 400px at 50% 0%, rgba(200, 168, 130, 0.07) 0%, transparent 70%);
+      background-repeat: no-repeat;
       font-family: var(--body);
       color: var(--ink);
       -webkit-font-smoothing: antialiased;
@@ -57,35 +58,34 @@
     main {
       width: 100%;
       max-width: 420px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
-    .logo {
+    .logo-outer {
       position: relative;
       z-index: 10;
-      width: 82px;
-      height: 82px;
-      margin: 0 auto -41px;
+      width: 92px;
+      height: 92px;
+      margin: 0 auto -46px;
+      padding: 3px;
       border-radius: 50%;
-      border: 2.5px solid var(--rose);
+      border: 2px solid rgba(166, 117, 128, 0.3);
       background: var(--card);
-      box-shadow: 0 4px 20px rgba(166, 117, 128, 0.25);
       display: flex;
       align-items: center;
       justify-content: center;
-      animation: logo-in 0.6s var(--ease-out-expo) 0s backwards;
+      animation: logo-in 0.7s var(--ease) 0s backwards;
     }
 
     .logo-inner {
       position: relative;
-      width: 74px;
-      height: 74px;
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
       border-radius: 50%;
+      border: 2px solid var(--champagne);
       overflow: hidden;
-      border: 2px solid rgba(200, 168, 130, 0.3);
-      background: var(--rose);
+      background: linear-gradient(135deg, var(--rose-light), var(--rose-mid));
+      box-shadow: 0 4px 16px rgba(166, 117, 128, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.3);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -93,9 +93,9 @@
 
     .logo-fallback {
       font-family: var(--display);
-      font-size: 24px;
-      font-weight: 500;
-      letter-spacing: 0.04em;
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
       color: #FFFFFF;
     }
 
@@ -111,88 +111,126 @@
       position: relative;
       width: 100%;
       background: var(--card);
-      border-radius: 22px;
+      border-radius: 24px;
       border: 1px solid rgba(166, 117, 128, 0.06);
-      box-shadow: 0 8px 32px rgba(166, 117, 128, 0.12);
-      padding: 56px 28px 32px;
+      box-shadow:
+        0 2px 8px rgba(166, 117, 128, 0.06),
+        0 8px 24px rgba(166, 117, 128, 0.08),
+        0 20px 48px rgba(166, 117, 128, 0.06);
+      padding: 60px 30px 36px;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 180px;
+      height: 1px;
+      border-radius: 1px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(200, 168, 130, 0.4) 30%,
+        rgba(200, 168, 130, 0.5) 50%,
+        rgba(200, 168, 130, 0.4) 70%,
+        transparent 100%);
     }
 
     .intro {
       text-align: center;
-      margin-bottom: 24px;
-      animation: fade-in 0.5s ease-out 0.15s backwards;
     }
 
     .name {
       font-family: var(--display);
-      font-size: 30px;
-      font-weight: 500;
+      font-size: 34px;
+      font-weight: 600;
       letter-spacing: 0.02em;
       line-height: 1.15;
       color: var(--ink);
-      margin-bottom: 2px;
+      margin-bottom: 4px;
+      animation: rise 0.5s var(--ease) 0.15s backwards;
     }
 
     .subtitle {
       display: block;
-      margin-top: -2px;
-      margin-bottom: 16px;
-      font-size: 13px;
-      font-weight: 400;
-      letter-spacing: 0.2em;
+      margin-bottom: 18px;
+      padding-left: 0.28em;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--rose);
+      animation: tighten 0.5s ease-out 0.25s backwards;
     }
 
     .tagline {
       font-family: var(--display);
       font-style: italic;
       font-size: 15px;
-      line-height: 1.5;
+      line-height: 1.55;
       color: var(--mauve);
-      opacity: 0.85;
-      max-width: 300px;
-      margin: 0 auto;
-      text-wrap: balance;
+      opacity: 0.8;
+      animation: fade-in-tagline 0.5s ease-out 0.35s backwards;
     }
 
-    .divider {
+    .ornament {
       display: block;
-      width: 60px;
-      height: 1px;
-      margin: 18px auto 0;
-      background: var(--champagne);
-      opacity: 0.5;
-      animation: reveal-line 0.4s ease-out 0.3s backwards;
+      width: 80px;
+      height: 16px;
+      margin: 20px auto 24px;
+      color: var(--champagne);
+      animation: unfold 0.5s var(--ease) 0.4s backwards;
     }
 
     .links {
       display: flex;
       flex-direction: column;
-      gap: 11px;
-      margin-top: 24px;
+      gap: 10px;
       list-style: none;
     }
 
     .link {
+      position: relative;
+      overflow: hidden;
       display: flex;
       align-items: center;
       gap: 14px;
-      padding: 15px 18px;
+      padding: 16px 20px;
       border-radius: 14px;
       text-decoration: none;
       background: var(--card);
-      border: 1px solid rgba(166, 117, 128, 0.25);
+      border: 1px solid rgba(166, 117, 128, 0.18);
       color: var(--ink);
-      transition: all 0.25s ease;
+      transition: all 0.3s var(--ease);
       -webkit-tap-highlight-color: transparent;
-      animation: slide-up 0.4s ease-out backwards;
+      animation: rise-btn 0.4s var(--ease) backwards;
+    }
+
+    .link::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 20px;
+      border-radius: 0 3px 3px 0;
+      background: var(--champagne);
+      opacity: 0;
+      transition: opacity 0.3s var(--ease), height 0.3s var(--ease);
     }
 
     .link:hover {
-      border-color: rgba(166, 117, 128, 0.5);
-      background: rgba(166, 117, 128, 0.04);
-      transform: translateY(-1px);
+      border-color: rgba(166, 117, 128, 0.4);
+      background: rgba(166, 117, 128, 0.02);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(166, 117, 128, 0.08);
+    }
+
+    .link:hover::before {
+      opacity: 1;
+      height: 28px;
     }
 
     .link:active {
@@ -205,18 +243,21 @@
     }
 
     .link-icon {
-      width: 40px;
-      height: 40px;
+      position: relative;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       flex-shrink: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(166, 117, 128, 0.07);
+      background: rgba(166, 117, 128, 0.06);
+      border: 1px solid rgba(166, 117, 128, 0.08);
       color: var(--rose);
     }
 
     .link-text {
+      position: relative;
       flex: 1;
       min-width: 0;
       display: flex;
@@ -227,122 +268,164 @@
       font-size: 15px;
       font-weight: 500;
       line-height: 1.3;
-      margin-bottom: 2px;
+      margin-bottom: 3px;
+      color: var(--ink);
     }
 
     .link-sub {
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 400;
       line-height: 1.4;
       color: var(--mauve);
-      opacity: 0.65;
-      overflow-wrap: anywhere;
+      opacity: 0.6;
+      text-wrap: pretty;
     }
 
     .link-arrow {
+      position: relative;
       flex-shrink: 0;
-      color: var(--mauve);
-      opacity: 0.4;
-      transition: transform 0.25s ease, opacity 0.25s ease;
+      color: var(--rose);
+      opacity: 0.3;
+      transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
     }
 
     .link:hover .link-arrow {
-      transform: translateX(2px);
       opacity: 0.6;
+      transform: translateX(3px);
     }
 
     .link--primary {
-      background: var(--rose);
-      border-color: var(--rose);
-      color: #FFFFFF;
+      background: linear-gradient(135deg, var(--rose-light) 0%, var(--rose-mid) 100%);
+      border: 0;
+      padding: 17px 21px;
+    }
+
+    .link--primary::before {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: none;
+      border-radius: inherit;
+      background: linear-gradient(135deg, var(--rose-mid) 0%, var(--rose-deep) 100%);
     }
 
     .link--primary:hover {
-      background: var(--rose-deep);
-      border-color: var(--rose-deep);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(166, 117, 128, 0.3);
+      background: linear-gradient(135deg, var(--rose-light) 0%, var(--rose-mid) 100%);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(166, 117, 128, 0.35);
+    }
+
+    .link--primary:hover::before {
+      height: 100%;
     }
 
     .link--primary .link-icon {
       background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.1);
+      color: #FFFFFF;
+    }
+
+    .link--primary .link-title,
+    .link--primary .link-sub {
       color: #FFFFFF;
     }
 
     .link--primary .link-sub {
-      color: #FFFFFF;
-      opacity: 0.8;
+      opacity: 0.75;
     }
 
     .link--primary .link-arrow {
       color: #FFFFFF;
-      opacity: 0.6;
+      opacity: 0.5;
     }
 
     .link--primary:hover .link-arrow {
-      opacity: 0.85;
+      opacity: 0.8;
     }
 
-    .links li:nth-child(1) .link { animation-delay: 0.35s; }
-    .links li:nth-child(2) .link { animation-delay: 0.42s; }
-    .links li:nth-child(3) .link { animation-delay: 0.49s; }
-    .links li:nth-child(4) .link { animation-delay: 0.56s; }
-    .links li:nth-child(5) .link { animation-delay: 0.63s; }
-    .links li:nth-child(6) .link { animation-delay: 0.70s; }
+    .links li:nth-child(1) .link { animation-delay: 0.45s; }
+    .links li:nth-child(2) .link { animation-delay: 0.51s; }
+    .links li:nth-child(3) .link { animation-delay: 0.57s; }
+    .links li:nth-child(4) .link { animation-delay: 0.63s; }
+    .links li:nth-child(5) .link { animation-delay: 0.69s; }
+    .links li:nth-child(6) .link { animation-delay: 0.75s; }
 
     .copyright {
-      margin-top: 20px;
+      margin-top: 24px;
       text-align: center;
       font-size: 11px;
+      letter-spacing: 0.03em;
       color: var(--mauve);
-      opacity: 0.4;
-      animation: fade-in-soft 0.4s ease-out 0.85s backwards;
+      opacity: 0.35;
+      animation: fade-in-copy 0.4s ease-out 0.9s backwards;
     }
 
     @keyframes logo-in {
       from {
         opacity: 0;
-        transform: translateY(-10px) scale(0.8);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: scale(0.85);
       }
     }
 
-    @keyframes fade-in {
-      from { opacity: 0; }
-    }
-
-    @keyframes fade-in-soft {
-      from { opacity: 0; }
-      to { opacity: 0.4; }
-    }
-
-    @keyframes reveal-line {
-      from { width: 0; }
-      to { width: 60px; }
-    }
-
-    @keyframes slide-up {
+    @keyframes rise {
       from {
         opacity: 0;
-        transform: translateY(14px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+        transform: translateY(8px);
       }
     }
 
-    @media (max-width: 350px) {
+    @keyframes tighten {
+      from {
+        opacity: 0;
+        letter-spacing: 0.35em;
+      }
+    }
+
+    @keyframes fade-in-tagline {
+      from { opacity: 0; }
+      to { opacity: 0.8; }
+    }
+
+    @keyframes unfold {
+      from {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      to {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes rise-btn {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+    }
+
+    @keyframes fade-in-copy {
+      from { opacity: 0; }
+      to { opacity: 0.35; }
+    }
+
+    @media (max-width: 360px) {
       .card {
-        padding: 52px 18px 26px;
+        padding: 56px 18px 28px;
+      }
+
+      .name {
+        font-size: 31px;
       }
 
       .link {
         gap: 12px;
         padding: 14px 14px;
+      }
+
+      .tagline br {
+        display: none;
       }
     }
 
@@ -360,19 +443,19 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      * {
+      *, *::before, *::after {
         animation: none !important;
-        transition: none !important;
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
 </head>
 <body>
   <main>
-    <div class="logo">
+    <div class="logo-outer">
       <div class="logo-inner">
         <span class="logo-fallback" aria-hidden="true">LB</span>
-        <img src="logo.png" alt="La Belle Estética" width="74" height="74" onerror="this.remove()">
+        <img src="logo.png" alt="La Belle Estética" width="80" height="80" onerror="this.remove()">
       </div>
     </div>
 
@@ -380,52 +463,54 @@
       <header class="intro">
         <h1 class="name">La Belle</h1>
         <span class="subtitle">Estética</span>
-        <p class="tagline">Beleza, cuidado e transformação em um só lugar</p>
-        <span class="divider" aria-hidden="true"></span>
+        <p class="tagline">Beleza, cuidado e transformação<br> em um só lugar</p>
+        <svg class="ornament" width="80" height="16" viewBox="0 0 80 16" fill="none" aria-hidden="true">
+          <path d="M0 8 C10 8 12 3 20 3 C28 3 28 8 32 8 C28 8 28 13 20 13 C12 13 10 8 0 8Z" fill="currentColor" opacity="0.4"/>
+          <circle cx="40" cy="8" r="2.5" fill="currentColor" opacity="0.5"/>
+          <path d="M80 8 C70 8 68 3 60 3 C52 3 52 8 48 8 C52 8 52 13 60 13 C68 13 70 8 80 8Z" fill="currentColor" opacity="0.4"/>
+        </svg>
       </header>
 
       <ul class="links">
         <li>
           <a class="link link--primary" href="https://api.whatsapp.com/send?phone=5543998153396&amp;text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20La%20Belle%20Est%C3%A9tica.%20Podem%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer">
             <span class="link-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="currentColor" stroke="none"/>
                 <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l4.9-1.4A10 10 0 1 0 12 2z"/>
-                <path d="M9 8.6c.2-.4.5-.6.8-.6h.5c.2 0 .4.1.5.4l.6 1.5c.1.2 0 .5-.1.7l-.5.6c.6 1.2 1.6 2.2 2.8 2.8l.6-.5c.2-.2.5-.2.7-.1l1.5.6c.3.1.4.3.4.5v.5c0 .3-.2.6-.6.8-.6.3-1.4.4-2.1.2-2.4-.8-4.3-2.7-5.1-5.1-.2-.7-.1-1.5.2-2.1z"/>
               </svg>
             </span>
             <span class="link-text">
               <span class="link-title">Fale conosco</span>
               <span class="link-sub">Agende seu horário pelo WhatsApp</span>
             </span>
-            <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"/>
             </svg>
           </a>
         </li>
         <li>
           <a class="link" href="https://www.instagram.com/labelleesteticalondrina/" target="_blank" rel="noopener noreferrer">
             <span class="link-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect x="2" y="2" width="20" height="20" rx="5"/>
                 <circle cx="12" cy="12" r="5"/>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
               </svg>
             </span>
             <span class="link-text">
               <span class="link-title">Instagram</span>
               <span class="link-sub">@labelleesteticalondrina</span>
             </span>
-            <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"/>
             </svg>
           </a>
         </li>
         <li>
           <a class="link" href="https://maps.google.com/maps?vet=10CAAQoqAOahcKEwiQpNap_s2XAxUAAAAAHQAAAAAQDQ..i&amp;rlz=1C1VDKB_enBR1154BR1154&amp;udm&amp;fvr=1&amp;pvq=CgsvZy8xdGZtcGsxdyIWChBsYWJlbGxlIGVzdGV0aWNhEAIYAw&amp;lqi=ChBsYWJlbGxlIGVzdGV0aWNhSLuI69nlgICACFoaEAAQARgAGAEiEGxhYmVsbGUgZXN0ZXRpY2GSAQxiZWF1dHlfc2Fsb24&amp;cs=1&amp;um=1&amp;ie=UTF-8&amp;fb=1&amp;gl=br&amp;sa=X&amp;ftid=0x94eb5b1e2accb7cb:0x9de2bb1ac3bd2cf3" target="_blank" rel="noopener noreferrer">
             <span class="link-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
@@ -434,16 +519,15 @@
               <span class="link-title">Localização</span>
               <span class="link-sub">Como chegar ao salão</span>
             </span>
-            <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"/>
             </svg>
           </a>
         </li>
         <li>
           <a class="link" href="{{CATALOGO}}" target="_blank" rel="noopener noreferrer">
             <span class="link-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
               </svg>
@@ -452,16 +536,15 @@
               <span class="link-title">Catálogo</span>
               <span class="link-sub">Conheça nossos serviços e valores</span>
             </span>
-            <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"/>
             </svg>
           </a>
         </li>
         <li>
           <a class="link" href="https://api.whatsapp.com/send?phone=5543999053397&amp;text=Ol%C3%A1!%20Tenho%20interesse%20nos%20cursos%20profissionalizantes%20da%20La%20Belle.%20Quais%20turmas%20est%C3%A3o%20abertas%3F" target="_blank" rel="noopener noreferrer">
             <span class="link-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
                 <path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/>
               </svg>
@@ -470,16 +553,15 @@
               <span class="link-title">Cursos</span>
               <span class="link-sub">Formações profissionais em estética</span>
             </span>
-            <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"/>
             </svg>
           </a>
         </li>
         <li>
           <a class="link" href="https://www.facebook.com/labelleesteticalondrina" target="_blank" rel="noopener noreferrer">
             <span class="link-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
               </svg>
             </span>
@@ -487,9 +569,8 @@
               <span class="link-title">Facebook</span>
               <span class="link-sub">Acompanhe nossas novidades</span>
             </span>
-            <svg class="link-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="5" y1="12" x2="19" y2="12"/>
-              <polyline points="12 5 19 12 12 19"/>
+            <svg class="link-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"/>
             </svg>
           </a>
         </li>
